@@ -20,6 +20,8 @@ class TestBrackets(unittest.TestCase):
             ("[()]({}){[]}", True),
             ("[()]({}){[]}(", False),
             ("[()]({}){[]})", False),
+            ("[({))]", False),
+            ("[({)}]", False),
         ]
 
         for input_string, expected_output in parameters_list:
